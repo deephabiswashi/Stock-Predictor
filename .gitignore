@@ -1,0 +1,25 @@
+# Virtual Environment
+venv1/
+*.pyc
+__pycache__/
+
+# Frontend Build Files
+frontend/node_modules/
+frontend/build/
+
+# System Files
+.DS_Store
+*.swp
+Thumbs.db
+
+# Jupyter Notebook Checkpoints
+notebooks/.ipynb_checkpoints/
+
+# Frontend dependencies
+node_modules/
+
+# Logs and temporary files
+logs/
+*.log
+debug.log
+
