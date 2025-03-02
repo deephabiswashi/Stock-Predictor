@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Prediction Visualization</title>
+  <!-- Link to your CSS file via Flask's url_for -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <!-- Include Chart.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Include Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Price Prediction Visualization</h1>
+
+    <!-- Prediction Form -->
+    <form id="predictionForm">
+      <label for="open">Open:</label>
+      <input type="number" id="open" name="open" required />
+
+      <label for="high">High:</label>
+      <input type="number" id="high" name="high" required />
+
+      <label for="low">Low:</label>
+      <input type="number" id="low" name="low" required />
+
+      <label for="shares">Shares Traded:</label>
+      <input type="number" id="shares" name="shares" required />
+
+      <label for="turnover">Turnover (₹ Cr):</label>
+      <input type="number" id="turnover" name="turnover" required />
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Text-based Results -->
+    <div id="resultContainer">
+      <p id="lrResult"></p>
+      <p id="lstmResult"></p>
+    </div>
+
+    <!-- Chart Container -->
+    <div id="chartContainer">
+      <canvas id="predictionChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <!-- Include your main.js script -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
